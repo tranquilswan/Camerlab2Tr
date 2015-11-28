@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+//This file does nothing in this app
 public class MainActivity extends Activity {
 
     @Override
