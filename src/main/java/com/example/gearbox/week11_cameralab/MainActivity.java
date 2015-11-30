@@ -12,6 +12,8 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FragmentManager fm = getFragmentManager();
+        fm.beginTransaction().replace(R.id.fragContainer, new CameraCaptureFragment(), CameraCaptureFragment.TAG).commit();
         setContentView(R.layout.activity_main);
     }
 
@@ -19,9 +21,6 @@ public class MainActivity extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
-
-        FragmentManager fm = getFragmentManager();
-        fm.beginTransaction().replace(R.id.fragContainer, new CameraCaptureFragment(), CameraCaptureFragment.TAG).commit();
 
         return true;
     }
